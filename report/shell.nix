@@ -12,6 +12,8 @@ pkgs.mkShell {
         latexmk
         biblatex
         biber
+        lualatex-math
+        libertinus-fonts libertinus-otf
       ;
     } )
   ];
