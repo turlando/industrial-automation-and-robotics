@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[a4paper]{book}
+\documentclass[a4paper]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -11,18 +11,23 @@
     , urldate=long
     ] {biblatex}
 
-\usepackage{hyperref}
-
 % Default font.
 \usepackage{libertinus-otf}
 
 % Don't indent paragraphs, but add some margin between them.
 \usepackage{parskip}
 
+% Hyperref should be the last loaded package.
+\usepackage{hyperref}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \addbibresource{main.bib}
-\hypersetup{hidelinks}
+
+\hypersetup
+    { hidelinks
+    , bookmarks
+    }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
