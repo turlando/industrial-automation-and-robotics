@@ -1,19 +1,24 @@
+LATEXMK := latexmk
+
 TEX := main.tex
 BIB := main.bib
 CONTENT := $(wildcard content/*.tex)
+
 PDF := main.pdf
+
+################################################################################
 
 .PHONY: all
 all: $(PDF)
 
 $(PDF): $(TEX) $(BIB) $(CONTENT)
-	latexmk $<
+	$(LATEXMK) $<
 
 .PHONY: clean
 clean:
-	latexmk -c
+	$(LATEXMK) -c
 
 .PHONY: distclean
 distclean: clean
-	latexmk -CA
-	rm -f main.pdf
+	$(LATEXMK) -CA
+	rm -f $(PDF)
