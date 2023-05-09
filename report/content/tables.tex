@@ -1,3 +1,8 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\begin{document}
+
 \begin{table}[]
     \centering
     \begin{tabular}{|c|c|c|}
@@ -12,15 +17,23 @@
        \hline
        CH1 & I0.3 & Residual chlorine sensor\\
        \hline
-       PH1 & I0.4 & pH sensor\\
+       TP1 & I0.4 & Temperature sensor\\
        \hline
-       Start & I0.5 & Start button\\
+       PH1 & I0.5 & pH sensor\\
        \hline
-       Stop & I0.6 & Stop button\\
+       Start & I0.6 & Start button\\
+       \hline
+       Stop & I0.7 & Stop button\\
+       \hline
+       Drain & I0.8 & Drain button\\
+       \hline
+       Resume & I0.9 & Resume button\\
+       \hline
+       Emergeny & I0.10 & Emergency stop button\\
        \hline
     \end{tabular}
     \caption{Input table}
-    \label{tab:input_table}
+    \label{tab:my_label}
 \end{table}
 
 \begin{table}[]
@@ -49,7 +62,7 @@
        \hline
     \end{tabular}
     \caption{Output table}
-    \label{tab:output_label}
+    \label{tab:my_label}
 \end{table}
 
 \begin{table}[]
@@ -78,5 +91,7 @@
        \hline
     \end{tabular}
     \caption{Internal varibles table}
-    \label{tab:internal_var_label}
+    \label{tab:my_label}
 \end{table}
+
+\end{document}
