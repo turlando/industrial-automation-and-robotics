@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.4.0" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+	<asset>
+		<contributor>
+			<author> SimLab Soft http://www.simLab-soft.com </author>
+			<authoring_tool>SimLab Composer 10</authoring_tool>
+		</contributor>
+		<created>2023-06-23T18:31:31</created>
+		<modified>2023-06-23T18:31:31</modified>
+		<unit meter="1.000000000000000" name="Meter"/>
+		<up_axis>Z_UP</up_axis>
+	</asset>
+	<library_visual_scenes>
+		<visual_scene id="Scene" name="Scene">
+			<node>
+				<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
+				<node  id="ID0" name="drive">
+					<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
+					<node  id="ID1" name="_0001">
+						<matrix> 0.001 0 0 0 0 0.001 0 0 0 0 0.001 0 0 0 0 1 </matrix>
+						<node  id="ID2" name="Default">
+							<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
+							<node  id="ID3" name="lettore_lettore_152938">
+								<matrix> 1 0 0 696.855 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
+								<node  id="ID4" name="lettore_lettore_152938">
+									<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
+									<node  id="ID5" name="Body">
+										<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
+										<node  id="ID6" name="_3DGeom-1">
+											<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
+											<instance_geometry url="#ID7">
+												<bind_material>
+													<technique_common>
+														<instance_material symbol="DefaultMaterial_2" target="#ID8">
+															<bind_vertex_input semantic="UVSET0" input_semantic="TEXCOORD" input_set="0" />
+														</instance_material>
+													</technique_common>
+												</bind_material>
+											</instance_geometry>
+										</node>
+										<node  id="ID9" name="_3DGeom-2">
+											<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
+											<instance_geometry url="#ID10">
+												<bind_material>
+													<technique_common>
+														<instance_material symbol="DefaultMaterial_2" target="#ID8">
+															<bind_vertex_input semantic="UVSET0" input_semantic="TEXCOORD" input_set="0" />
+														</instance_material>
+													</technique_common>
+												</bind_material>
+											</instance_geometry>
+										</node>
+									</node>
+								</node>
+							</node>
+						</node>
+					</node>
+				</node>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<library_geometries>
+		<geometry id="ID7" name="geo_0">
+			<mesh>
+				<source id="geo_0-Position">
+					<float_array count="108" id="geo_0-Position-array">-881 0 300 -881 0 0 -881 15 0 -881 0 300 -881 15 0 -881 15 300 -1181 0 300 -1181 0 0 -881 0 0 -1181 0 300 -881 0 0 -881 0 300 -1181 15 300 -1181 15 0 -1181 0 0 -1181 15 300 -1181 0 0 -1181 0 300 -881 15 300 -881 15 0 -1181 15 0 -881 15 300 -1181 15 0 -1181 15 300 -1181 0 0 -881 15 0 -881 0 0 -1181 0 0 -1181 15 0 -881 15 0 -1181 0 300 -881 0 300 -881 15 300 -1181 0 300 -881 15 300 -1181 15 300 </float_array>
+					<technique_common>
+						<accessor count="36" source="#geo_0-Position-array" stride="3">
+							<param name="X" type="float"/>
+							<param name="Y" type="float"/>
+							<param name="Z" type="float"/>
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="geo_0-Normals">
+					<float_array count="108" id="geo_0-Normals-array">1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 </float_array>
+					<technique_common>
+						<accessor count="36" source="#geo_0-Normals-array" stride="3">
+							<param name="X" type="float"/>
+							<param name="Y" type="float"/>
+							<param name="Z" type="float"/>
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="geo_0-Vertex">
+					<input semantic="POSITION" source="#geo_0-Position"/>
+				</vertices>
+				<triangles count="12" material="DefaultMaterial_2">
+					<input offset="0" semantic="VERTEX" source="#geo_0-Vertex"/>
+					<input offset="1" semantic="NORMAL"  source="#geo_0-Normals"/>
+					<p>0 0 1 1 2 2 0 0 2 2 5 5 6 6 7 7 8 8 6 6 8 8 11 11 12 12 13 13 14 14 12 12 14 14 17 17 18 18 19 19 20 20 18 18 20 20 23 23 24 24 25 25 26 26 24 24 28 28 25 25 30 30 31 31 32 32 30 30 32 32 35 35 </p>
+				</triangles>
+			</mesh>
+		</geometry>
+		<geometry id="ID10" name="geo_1">
+			<mesh>
+				<source id="geo_1-Position">
+					<float_array count="288" id="geo_1-Position-array">-1181 0 300 -1181 0 0 -1181 -120 0 -1181 -120 300 -1181 0 300 -1181 -120 0 -881 0 300 -1181 0 300 -1181 -120 300 -881 -120 300 -881 0 300 -1181 -120 300 -881 0 0 -881 0 300 -881 -120 300 -881 -120 0 -881 0 0 -881 -120 300 -1181 0 0 -881 0 0 -881 -120 0 -1181 -120 0 -1181 0 0 -881 -120 0 -1020 0 150 -1042 -120 150 -1020 -120 150 -1020 0 150 -1042 0 150 -1042 -120 150 -1020 0 280 -1020 0 150 -1020 -120 150 -1020 -120 280 -1020 0 280 -1020 -120 150 -1042 0 280 -1020 -120 280 -1042 -120 280 -1042 0 280 -1020 0 280 -1020 -120 280 -1042 0 150 -1042 0 280 -1042 -120 280 -1042 -120 150 -1042 0 150 -1042 -120 280 -1042 -120 150 -1181 -120 0 -881 -120 0 -1020 -120 150 -1042 -120 150 -881 -120 0 -1042 -120 150 -1181 -120 300 -1181 -120 0 -1020 -120 150 -881 -120 300 -1020 -120 280 -1020 -120 150 -881 -120 0 -881 -120 300 -1020 -120 280 -881 -120 300 -1181 -120 300 -1042 -120 280 -1181 -120 300 -1042 -120 150 -1042 -120 280 -1020 -120 280 -1181 -120 300 -1042 0 150 -881 0 0 -1181 0 0 -1020 0 150 -881 0 0 -1042 0 150 -1042 0 150 -1181 0 0 -1181 0 300 -1020 0 150 -1020 0 280 -881 0 300 -1020 0 150 -881 0 300 -881 0 0 -1020 0 280 -1181 0 300 -881 0 300 -1042 0 280 -1042 0 150 -1181 0 300 -1042 0 280 -1181 0 300 -1020 0 280 </float_array>
+					<technique_common>
+						<accessor count="96" source="#geo_1-Position-array" stride="3">
+							<param name="X" type="float"/>
+							<param name="Y" type="float"/>
+							<param name="Z" type="float"/>
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="geo_1-Normals">
+					<float_array count="288" id="geo_1-Normals-array">-1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 </float_array>
+					<technique_common>
+						<accessor count="96" source="#geo_1-Normals-array" stride="3">
+							<param name="X" type="float"/>
+							<param name="Y" type="float"/>
+							<param name="Z" type="float"/>
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="geo_1-Vertex">
+					<input semantic="POSITION" source="#geo_1-Position"/>
+				</vertices>
+				<triangles count="32" material="DefaultMaterial_2">
+					<input offset="0" semantic="VERTEX" source="#geo_1-Vertex"/>
+					<input offset="1" semantic="NORMAL"  source="#geo_1-Normals"/>
+					<p>0 0 1 1 2 2 3 3 0 0 2 2 6 6 7 7 8 8 9 9 6 6 8 8 12 12 13 13 14 14 15 15 12 12 14 14 18 18 19 19 20 20 21 21 18 18 20 20 24 24 25 25 26 26 24 24 28 28 25 25 30 30 31 31 32 32 33 33 30 30 32 32 36 36 37 37 38 38 36 36 40 40 37 37 42 42 43 43 44 44 45 45 42 42 44 44 48 48 49 49 50 50 51 51 48 48 50 50 48 48 55 55 49 49 51 51 58 58 59 59 51 51 50 50 58 58 59 59 58 58 55 55 66 66 55 55 48 48 66 66 59 59 55 55 72 72 73 73 74 74 75 75 73 73 72 72 72 72 74 74 80 80 75 75 82 82 83 83 75 75 83 83 73 73 82 82 80 80 83 83 90 90 72 72 80 80 90 90 80 80 82 82 </p>
+				</triangles>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_materials>
+		<material id="ID8" name="DefaultMaterial_2">
+			<instance_effect url="#ID11"/>
+		</material>
+	</library_materials>
+	<library_effects>
+		<effect id="ID11">
+			<profile_COMMON>
+				<technique sid="standard">
+					<phong>
+						<emission><color>0 0 0 1</color></emission>
+						<ambient><color>0.6 0.6 0.6 1</color></ambient>
+						<diffuse>
+							<color>0.9 0.9 0.9 1</color>
+						</diffuse>
+						<specular><color>0.25 0.25 0.25 1</color></specular>
+						<transparent opaque="A_ONE"><color>1.0 1.0 1.0 1.0</color></transparent>
+						<transparency><float>1</float></transparency>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<scene>
+		<instance_visual_scene url="#Scene"/>
+	</scene>
+</COLLADA>
