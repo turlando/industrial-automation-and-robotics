@@ -2,7 +2,7 @@
 
 ## Water treatment
 
-* [Presentationn](./WaterTreatment/Presentation/Presentation.pdf)
+* [Presentation](./WaterTreatment/Presentation/Presentation.pdf)
 * [TIA Portal Project](./WaterTreatment/Project)
 
 ## Tape library
