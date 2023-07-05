@@ -143,7 +143,13 @@ function state_transition()
 
     if g_state.state == STATE_PICKING_ATTACHING then
         local target = get_proximity_sensor_target(g_proximity_sensor)
-        if target ~= nil then
+        if target == nil then
+            log_error("No cartridge found at this location. Aborting.")
+            g_state = {
+                state  = STATE_STORING_ISSUING_MOVE_Y_BACKWARD,
+                target = nil
+            }
+        else
             detach_object(target)
             -- sim.setInt32Signal('gripper', 1)
             attach_objects(g_gripper, target)
@@ -256,7 +262,13 @@ function state_transition()
 
     if g_state.state == STATE_UNLOADING_ATTACHING then
         local target = get_proximity_sensor_target(g_proximity_sensor)
-        if target ~= nil then
+        if target == nil then
+            log_error("No cartridge found in tape drive. Aborting.")
+            g_state = {
+                state  = STATE_STORING_ISSUING_MOVE_Y_BACKWARD,
+                target = nil
+            }
+        else
             detach_object(target)
             attach_objects(g_gripper, target)
             g_state.state = STATE_UNLOADING_ISSUING_MOVE_Y_BACKWARD
@@ -351,8 +363,11 @@ end
 -- Cartridge Helpers
 --------------------------------------------------------------------------------
 
+CARTRIDGE_DISTANCE = 0.05
+CARTRIDGE_WIDTH = 0.02155
+
 OFFSET_BASE_X  = 0.42
-OFFSET_DELTA_X = 0.05 + 0.02155
+OFFSET_DELTA_X = CARTRIDGE_DISTANCE + CARTRIDGE_WIDTH
 
 OFFSET_Y = 0.15
 
@@ -426,7 +441,9 @@ UI_XML = [[
 
 function on_load_request(ui, id)
     if g_state.state ~= STATE_HALT_UNLOADED then
-        log_warning("Can't load cartridge now.")
+        log_warning("Can't load cartridge now. Another operation is already " ..
+                    "in progress or a cartridge is already loaded in the " ..
+                    "tape drive.")
         return
     end
 
@@ -442,7 +459,9 @@ end
 
 function on_eject_request(ui, id)
     if g_state.state ~= STATE_HALT_LOADED then
-        log_warning("Can't eject cartridge now.")
+        log_warning("Can't eject cartridge now. Another operation is " ..
+                    "already in progress or there is no cartridge to eject in " ..
+                    "the tape drive.")
         return
     end
 
